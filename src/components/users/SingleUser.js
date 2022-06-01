@@ -17,7 +17,7 @@ const SingleUser = ({ user: { login, avatar_url } }) => {
     </div>
     <div>
       <h2 className="card text-warning-content">{login}</h2>
-      <Link className='text-error-content text-opacity-40' to={`/users/${login}`}>
+      <Link className='text-error-content text-opacity-40' to={`/user/${login}`}>
         Visit Profile
         </Link>
     </div>
