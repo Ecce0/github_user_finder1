@@ -3,13 +3,15 @@ import { Link, useParams } from 'react-router-dom'
 import GithubContext from '../context/github/GithubContext'
 import { FaCodepen, FaStore, FaUserFriends, FaUsers } from 'react-icons/fa'
 import Spinner from '../components/layout/Spinner'
+import List from '../components/repos/List'
 
 const User = () => {
-	const { user, getUser, loading } = useContext(GithubContext)
+	const { user, getUser, loading, getRepos, repos } = useContext(GithubContext)
 	const params = useParams()
 
 	useEffect(() => {
 		getUser(params.login)
+		getRepos(params.login)
 	}, [])
 
 	const {
@@ -75,7 +77,7 @@ const User = () => {
 							</div>
 						</div>
 
-						<div className='w-full rounded-lg shadow-md bg-base-100 stat'>
+						<div className='w-full rounded-lg shadow-md bg-base-100 stats'>
 							{location && (
 								<div className='stat'>
 									<div className='stat-title text-md'>Location</div>
@@ -158,6 +160,8 @@ const User = () => {
 
        </div>
 			</div>
+
+			<List repos={repos}/>
 		</>
 	)
 }

@@ -23,7 +23,13 @@ const githubReducer = (state, action) => {
         ...state,
         loading: false,
         user: action.payload
-      }    
+      }  
+    case 'GET_REPOS':
+      return {
+        ...state,
+        loading: false,
+        repos: action.payload
+      }  
     
     default: 
      return state
