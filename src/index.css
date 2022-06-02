@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body > footer {
+    position: sticky;
+    top: 100vh;
+  }
+
 .footer > * {
     display: grid;
     place-items: center;

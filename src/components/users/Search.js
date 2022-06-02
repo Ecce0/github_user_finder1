@@ -43,7 +43,7 @@ const Search = () => {
 								onChange={handleChange}
 							/>
 							<button
-								className='absolute top-0 right-0 rounded-l-none w-36 btn btn-lg'
+								className='absolute top-0 right-0 rounded-l-none w-36 btn btn-lg bg-primary'
 								type='submit'
 							>
 								Go
@@ -55,7 +55,7 @@ const Search = () => {
 			{users.length > 0 && (
 				<div>
 					<button 
-          className='btn btn-ghost btn-large'
+          className='btn btn-secondary btn-large'
           onClick={() => dispatch({ type: 'CLEAR_USERS' })}>
             Clear
           </button>

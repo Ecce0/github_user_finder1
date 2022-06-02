@@ -64,13 +64,13 @@ const User = () => {
 							</div>
 						</div>
 					</div>
-					<div className='col-span-'>
+					<div className='col-span-2'>
 						<div className='mb-6'>
 							<h1 className='text-3xl card-title'>
 								{name}
-								<div className='ml-2 mr-1 badge badge-success'>{type}</div>
+								<div className='ml-2 mr-1 badge badge-secondary'>{type}</div>
 								{hireable && (
-									<div className='mx-1 badge badge-info'>Hireable</div>
+									<div className='mx-1 badge badge-primary'>Hireable</div>
 								)}
 							</h1>
 							<p>{bio}</p>
@@ -85,22 +85,24 @@ const User = () => {
 								</a>
 							</div>
 						</div>
-
-						<div className='w-full rounded-lg shadow-md bg-base-100 stats'>
+						
+						<div className='w-full rounded-lg shadow-md bg-neutral-focus stats'>
 							{location && (
+								<div className='text-primary-content'>
 								<div className='stat'>
-									<div className='stat-title text-md'>Location</div>
-									<div className='text-lg stat-value'>{location}</div>
+									<div className='stat-title text-md text-primary'>Location</div>
+									<div className='text-lg stat-value text-primary'>{location}</div>
+								</div>
 								</div>
 							)}
 							{blog && (
 								<div className='stat'>
-									<div className='stat-title text-md'>Website</div>
-									<div className='text-lg stat-value'>
+									<div className='stat-title text-md text-primary'>Website</div>
+									<div className='text-lg stat-value text-primary'>
 										<a
 											href={`https://${blog}`}
 											target='_blank'
-											rel='norefferrer'
+											rel="noopener noreferrer"
 										>
 											{blog}
 										</a>
@@ -109,12 +111,12 @@ const User = () => {
 							)}
 							{twitter_username && (
 								<div className='stat'>
-									<div className='stat-title text-md'>Twitter</div>
-									<div className='text-lg stat-value'>
+									<div className='stat-title text-md text-primary'>Twitter</div>
+									<div className='text-lg stat-value text-primary'>
 										<a
 											href={`https://twitter.com/${twitter_username}`}
 											target='_blank'
-											rel='norefferrer'
+											rel="noopener noreferrer"
 										>
 											{twitter_username}
 										</a>
@@ -122,12 +124,13 @@ const User = () => {
 								</div>
 							)}
 						</div>
-					</div>
+						</div>	
+					
 				</div>
 
 				<div className='w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats'>
 					<div className='stat'>
-						<div className='stat-figure text-secondary'>
+						<div className='stat-figure text-secondary-focus'>
 							<FaUsers className='text-3xl md:text-5xl' />
 						</div>
 						<div className='stat-title pr-'>Followers</div>
@@ -137,7 +140,7 @@ const User = () => {
 					</div>
 
 					<div className='stat'>
-						<div className='stat-figure text-secondary'>
+						<div className='stat-figure text-secondary-focus'>
 							<FaUserFriends className='text-3xl md:text-5xl' />
 						</div>
 						<div className='stat-title pr-'>Following</div>
@@ -147,7 +150,7 @@ const User = () => {
 					</div>
 
 					<div className='stat'>
-						<div className='stat-figure text-secondary'>
+						<div className='stat-figure text-secondary-focus'>
 							<FaCodepen className='text-3xl md:text-5xl' />
 						</div>
 						<div className='stat-title pr-'>Public Repos</div>
@@ -157,7 +160,7 @@ const User = () => {
 					</div>
 
 					<div className='stat'>
-						<div className='stat-figure text-secondary'>
+						<div className='stat-figure text-secondary-focus'>
 							<FaStore className='text-3xl md:text-5xl' />
 						</div>
 						<div className='stat-title pr-'>Public Gist</div>

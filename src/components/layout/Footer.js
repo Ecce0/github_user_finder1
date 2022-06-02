@@ -6,7 +6,7 @@ const Footer = () => {
 
 
   return(
-    <footer className="flex justify-center footer p-10 bg-secondary-focus text-primary-content footer-content">
+    <footer className="flex justify-center footer p-10 bg-secondary-focus text-primary-content footer-content ">
       <div className="grid grid-rows-2 gap-0">
         <div>
           <FaRegCopyright size={60} />
