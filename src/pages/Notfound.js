@@ -2,7 +2,7 @@ import React from "react"
 import { FaHome } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-const NotFoundError = () => {
+const Notfound = () => {
   
  
   return(
@@ -27,4 +27,4 @@ const NotFoundError = () => {
   )
 }
 
-export default NotFoundError
+export default Notfound
