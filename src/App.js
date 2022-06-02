@@ -3,7 +3,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
-import NotFound from './pages/NotFound'
+import NotFoundError from './pages/NotFound'
 import { GithubProvider } from './context/github/GithubContext'
 import { AlertProvider } from './context/alert/AlertContext'
 import Alert from './components/layout/Alert'
@@ -30,7 +30,7 @@ function App() {
 								/>
 								<Route path='/about' element={<About />} />
 								<Route path='/user/:login' element={<User />} />
-								<Route path='/notfound' element={<NotFound />} />
+								<Route path='/notfound' element={<NotFoundError />} />
 								<Route path='*' element={<NotFound />} />
 							</Routes>
 						</main>

@@ -2,9 +2,8 @@ import React from "react"
 import { FaHome } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-const NotFound = () => {
- 
- 
+const NotFoundError = () => {
+  
  
   return(
 
@@ -24,7 +23,8 @@ const NotFound = () => {
         </div>
       </div>
     </div>
+   
   )
 }
 
-export default NotFound
+export default NotFoundError
